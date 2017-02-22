@@ -28,7 +28,7 @@ bin: npm start // build the ts files to js
 
 run
 ```shell
-bin: node | nodemon run ./dist/changelog/changelog.js -B | basic-auth | -O | oauth
+bin: node | nodemon run changelog -B | basic-auth | -O | oauth
 ```
 
 Available arguments: 
