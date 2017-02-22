@@ -1,25 +1,25 @@
 
-
+                    
 [1.3.120](https://github.com/fuse-box/fuse-box/milestone/8)
 ======
     
 
-Critical bug fixes
+                    Critical bug fixes
 
-Title | Closed
+                    Title | Closed
 --- | ---
 [ISSUE 262](https://github.com/fuse-box/fuse-box/issues/262) ResourceCSSPlugin -> handle hashtags in urls | February 21, 2017 6:50 PM
 [ISSUE 263](https://github.com/fuse-box/fuse-box/issues/263) Buffer is not bundled correctly | February 21, 2017 6:46 PM
 
                 
-
+                    
 [1.3.119](https://github.com/fuse-box/fuse-box/milestone/5)
 ======
     
 
+                    
 
-
-Title | Closed
+                    Title | Closed
 --- | ---
 [ISSUE 111](https://github.com/fuse-box/fuse-box/issues/111) Allow real aliasing | February 21, 2017 9:33 AM
 [ISSUE 159](https://github.com/fuse-box/fuse-box/issues/159) EnvPlugin: The global process is not available after hot-reload | February 20, 2017 9:52 PM
@@ -37,14 +37,14 @@ Title | Closed
 [ISSUE 257](https://github.com/fuse-box/fuse-box/issues/257) Reload the page with HMR if a package is not found in the scope. | February 21, 2017 11:07 AM
 
                 
-
+                    
 [1.3.118](https://github.com/fuse-box/fuse-box/milestone/6)
 ======
     
 
+                    
 
-
-Title | Closed
+                    Title | Closed
 --- | ---
 [PR 200](https://github.com/fuse-box/fuse-box/pull/200) add expose possibilities | February 17, 2017 6:41 PM
 [PR 204](https://github.com/fuse-box/fuse-box/pull/204) Added Coffee support | February 17, 2017 12:47 PM
@@ -56,14 +56,14 @@ Title | Closed
 [PR 221](https://github.com/fuse-box/fuse-box/pull/221) :memo: simply the docs for how to add a loader plugin :rose: | February 18, 2017 7:02 AM
 
                 
-
+                    
 [1.3.117](https://github.com/fuse-box/fuse-box/milestone/4)
 ======
     
 
+                    
 
-
-Title | Closed
+                    Title | Closed
 --- | ---
 [PR 158](https://github.com/fuse-box/fuse-box/pull/158) HMR plugins | February 16, 2017 10:48 PM
 [ISSUE 167](https://github.com/fuse-box/fuse-box/issues/167) UglifyJS Plugin should report on progress and recalculate the bundle size | February 16, 2017 10:45 PM
@@ -74,14 +74,14 @@ Title | Closed
 [PR 201](https://github.com/fuse-box/fuse-box/pull/201) :memo: rename to actual plugin name `PostCSS` | February 17, 2017 7:12 AM
 
                 
-
+                    
 [1.3.116](https://github.com/fuse-box/fuse-box/milestone/3)
 ======
     
 
-HMR Plugins
+                    HMR Plugins
 
-Title | Closed
+                    Title | Closed
 --- | ---
 [ISSUE 179](https://github.com/fuse-box/fuse-box/issues/179) CSSResourcePlugin does not bundle Fonts | February 15, 2017 8:43 PM
 [PR 182](https://github.com/fuse-box/fuse-box/pull/182) Fix a typo. | February 15, 2017 8:43 PM
@@ -90,30 +90,30 @@ Title | Closed
 [PR 191](https://github.com/fuse-box/fuse-box/pull/191) add notes to env, uglify, and json plugins | February 16, 2017 7:28 PM
 
                 
-
+                    
 [1.3.115](https://github.com/fuse-box/fuse-box/milestone/2)
 ======
     
 
+                    
 
-
-Title | Closed
+                    Title | Closed
 --- | ---
 [ISSUE 156](https://github.com/fuse-box/fuse-box/issues/156) electron-fusebox - Node API | February 15, 2017 9:52 AM
 [ISSUE 180](https://github.com/fuse-box/fuse-box/issues/180) Babel fails on config without sourcemaps | February 15, 2017 2:29 PM
 
                 
-
+                    
 [1.3.114](https://github.com/fuse-box/fuse-box/milestone/1)
 ======
     
 
-# transformTypescript enhancement
+                    # transformTypescript enhancement
 # Check if imported package has a browser-field and use it  enhancement
 # FuseBox.exists("app.html") triggers error bug
 # Add package name to the public API enhancement
 
-Title | Closed
+                    Title | Closed
 --- | ---
 [PR 154](https://github.com/fuse-box/fuse-box/pull/154) Check if imported package has a browser-field and use it | February 14, 2017 10:08 PM
 [ISSUE 162](https://github.com/fuse-box/fuse-box/issues/162) add package name to the public API | February 14, 2017 2:53 PM

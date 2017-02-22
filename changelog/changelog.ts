@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import * as fs from 'fs';
 import { IMileStoneWithIssues, ChangeLogTemplate } from './changelogTemplate';
 import { IMilestones, IIssue } from './interfaces';

@@ -1,11 +1,11 @@
 {
     "compilerOptions": {
-        "target": "es5",
+        "target": "es6",
         "module": "commonjs",
         "moduleResolution": "node",
         "isolatedModules": false,
-        "sourceMap": true,
-        "inlineSourceMap": true,
+        "sourceMap": false,
+        "inlineSourceMap": false,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "noUnusedLocals": false,
@@ -23,8 +23,7 @@
         "src/**/*",
         "**/*.d.ts",
         "node_modules/**/*",
-        "bin/node_modules/**/*",
-        "node_modules"
+        "node_modules/**/d.ts"
     ],
     "compileOnSave": false,
     "buildOnSave": false,
