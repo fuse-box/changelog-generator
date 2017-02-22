@@ -52,9 +52,9 @@ export class ChangeLogTemplate {
       .sort(this.sortByMileStone)
       .map((item) => {
         return `
-                    ${altH1(link(item.milestone.title, item.milestone.html_url))}\n\r
-                    ${item.milestone.description}\n\r
-                    ${this.getIssueTable(item.issues)}
+${altH1(link(item.milestone.title, item.milestone.html_url))}\n\r
+${item.milestone.description}\n\r
+${this.getIssueTable(item.issues)}
                 `;
       });
     let template = '';
