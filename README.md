@@ -13,6 +13,8 @@ export class GithubConfig{
     static token = 'token'; // oauth
     static username = 'username'; // basicAuth
     static password = 'secret'; // basicAuth
+    static repoOwner = 'fuse-box';
+    static repoName = 'fuse-box';
 }
 ```
 
