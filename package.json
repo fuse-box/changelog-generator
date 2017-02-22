@@ -1,0 +1,33 @@
+{
+  "name": "changelog-generator",
+  "version": "0.0.1-alpha",
+  "description": "rtfm",
+  "main": "changelog/changelog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc -w -p .",
+    "changelog": "./dist/changelog/changelog.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@reactivex/rxjs": "^5.1.1",
+    "@types/es6-shim": "^0.31.32",
+    "@types/moment": "^2.13.0",
+    "@types/node": "^7.0.5",
+    "github": "^9.0.0",
+    "moment": "^2.17.1",
+    "no-case": "^2.3.1",
+    "node": "^0.0.0",
+    "semver": "^5.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuse-box/changelog-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fuse-box/changelog-generator/issues"
+  },
+  "homepage": "https://github.com/fuse-box/changelog-generator#readme"
+}
