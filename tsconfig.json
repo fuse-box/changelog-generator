@@ -10,7 +10,7 @@
         "emitDecoratorMetadata": true,
         "noUnusedLocals": false,
         "declaration": false,
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         "noImplicitUseStrict": false,
         "removeComments": true,
         "noLib": false,
@@ -19,8 +19,7 @@
         "outDir": "dist"
     },
     "exclude": [
-        "loader/**/*",
-        "src/**/*",
+        "src/bin",
         "**/*.d.ts",
         "node_modules/**/*",
         "node_modules/**/d.ts"
