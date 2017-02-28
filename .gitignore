@@ -5,7 +5,6 @@ node_modules/
 .alm/
 yarn.lock
 build/
-dist/
 .DS_Store
 .tmp/
 .idea/
@@ -16,5 +15,3 @@ npm-debug.log*
 playground
 _playground
 github-config.ts
-dist/gulpfile.js
-/gulpfile.js
