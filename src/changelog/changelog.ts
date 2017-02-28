@@ -30,7 +30,7 @@ export class ChangelogApi {
 
   authenticate(args: any[]) {
     if (!args || args && !args[2]) {
-      return this.basicAuth();
+      return ;
     }
     const index = this._cmd.indexOf(args[2]);
     if (index !== -1) {

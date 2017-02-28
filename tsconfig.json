@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "es6",
+        "target": "es5",
         "module": "commonjs",
         "moduleResolution": "node",
         "isolatedModules": false,
@@ -15,6 +15,7 @@
         "removeComments": true,
         "noLib": false,
         "preserveConstEnums": true,
+        "rootDir": "src",
         "suppressImplicitAnyIndexErrors": true,
         "outDir": "dist"
     },

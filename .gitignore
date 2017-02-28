@@ -15,5 +15,6 @@ _dist
 npm-debug.log*
 playground
 _playground
-**/*.js
 github-config.ts
+dist/gulpfile.js
+/gulpfile.js

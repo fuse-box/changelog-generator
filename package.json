@@ -8,23 +8,18 @@
     "start": "tsc -w -p .",
     "changelog": "./dist/changelog/changelog.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["gulpplugin"],
+  "author": "DrMabuse",
   "license": "ISC",
   "devDependencies": {
-    "@reactivex/rxjs": "^5.1.1",
     "@types/es6-shim": "^0.31.32",
     "@types/gulp-util": "^3.0.30",
     "@types/moment": "^2.13.0",
     "@types/node": "^7.0.5",
-    "github": "^9.0.0",
-    "moment": "^2.17.1",
-    "no-case": "^2.3.1",
     "node": "^0.0.0",
-    "semver": "^5.3.0",
-    "@types/through2": "^2.0.32",
-    "gulp": "^3.9.1"
+    "@types/through2": "^2.0.32"
   },
+  "main": "dist/gulp-changelog-generator.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fuse-box/changelog-generator.git"
@@ -34,7 +29,13 @@
   },
   "homepage": "https://github.com/fuse-box/changelog-generator#readme",
   "dependencies": {
+    "@reactivex/rxjs": "^5.1.1",
     "gulp-util": "^3.0.8",
-    "through2": "^2.0.3"
+    "through2": "^2.0.3",
+    "github": "^9.0.0",
+    "moment": "^2.17.1",
+    "no-case": "^2.3.1",
+    "semver": "^5.3.0",
+    "gulp": "^3.9.1"
   }
 }

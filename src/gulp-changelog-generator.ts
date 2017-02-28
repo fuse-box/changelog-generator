@@ -1,20 +1,21 @@
+"use strict";
+
+import {ChangelogApi} from './changelog/changelog';
 import {Observer} from '@reactivex/rxjs/dist/cjs/Observer';
 import {Observable} from '@reactivex/rxjs/dist/cjs/Observable';
-import {ChangeLogTemplate} from '../changelog/changelogTemplate';
-import {IMileStoneWithIssues} from '../changelog/changelogTemplate';
-import {ChangelogApi} from '../changelog/changelog';
+import {IMileStoneWithIssues, ChangeLogTemplate} from './changelog/changelogTemplate';
+import {Config} from './changelog/interfaces';
 
 // through2 is a thin wrapper around node transform streams
 import * as  through from 'through2'
 import * as gutil from 'gulp-util';
-import {Config} from '../changelog/interfaces';
 
 const PluginError = gutil.PluginError;
 
 // Consts
 const PLUGIN_NAME = 'gulp-changelog-generator';
 
-const prefixStream = (options: Config) => {
+export const prefixStream = (options: Config) => {
   const api = new ChangelogApi(options);
   const _milestones: IMileStoneWithIssues[] = [];
   let template: ChangeLogTemplate;
@@ -48,26 +49,30 @@ const prefixStream = (options: Config) => {
   });
 }
 
-// Plugin level function(dealing with files)
-export const gulpChangeLogGenerator = (options: Config) => {
+export const gulpChangeLogGeneratorPlugin = (options: Config) => {
 
   if (!options.repoName && !options.repoName) {
     throw new PluginError(PLUGIN_NAME, 'Missing prefix repo information!');
   }
-  return prefixStream(options).subscribe((template: Buffer[]) => {
-    return through.obj((file, enc, cb) => {
-      if (file.isNull()) {
-        // return empty file
-        return cb(null, file);
-      }
-      if (file.isBuffer()) {
-        file.contents = Buffer.concat([template, file.contents]);
-      }
-      if (file.isStream()) {
-        file.contents = file.contents.pipe(template);
-      }
-      cb(null, file);
-    });
-  })
-}
 
+  return through.obj((file, enc, cb) => {
+    return prefixStream(options)
+      .toPromise()
+      .then((template: Buffer[]) => {
+        if (file.isNull()) {
+          // return empty file
+          return cb(null, file);
+        }
+        if (file.isBuffer()) {
+          throw new PluginError(PLUGIN_NAME, 'no Buffer support allowed! please use `gulp.src(\'file\', {buffer: false})`');
+        }
+        if (file.isStream()) {
+          file.contents = file.contents.pipe(template);
+        }
+        return Promise.resolve(cb(null, file));
+      })
+      .catch((e:Error) => {
+        throw new PluginError(PLUGIN_NAME, e.message);
+      });
+  });
+}
