@@ -1,6 +1,8 @@
 "use strict";
 var Markdown_1 = require('../utils/Markdown');
+var Markdown_2 = require('../utils/Markdown');
 var semver = require('semver');
+var rightPad = require('right-pad');
 var ChangeLogTemplate = (function () {
     function ChangeLogTemplate(_milestones) {
         this._milestones = _milestones;
@@ -21,10 +23,10 @@ var ChangeLogTemplate = (function () {
         var title = "";
         issues.forEach(function (issue) {
             if (issue.pull_request) {
-                title += "\n[" + Markdown_1.link('PR ' + issue.number, issue.pull_request.html_url) + "] " + issue.title + "\n___\n";
+                title += "\n" + rightPad(Markdown_2.link('PR ' + issue.number, issue.pull_request.html_url), 24, ' ') + " | " + issue.title + " | " + (issue.closed_at ? Markdown_2.humanDate(issue.closed_at) : '--') + "\n";
             }
             else {
-                title += "\n[" + Markdown_1.link('ISSUE ' + issue.number, issue.html_url) + "] " + issue.title + "\n___\n";
+                title += "\n" + rightPad(Markdown_2.link('ISSUE ' + issue.number, issue.html_url), 24, ' ') + " | " + issue.title + " | " + (issue.closed_at ? Markdown_2.humanDate(issue.closed_at) : '--') + "\n";
             }
             return title;
         });
@@ -35,7 +37,7 @@ var ChangeLogTemplate = (function () {
         var milestonesMd = this._milestones
             .sort(this.sortByMileStone)
             .map(function (item) {
-            return "\n" + Markdown_1.altH1(Markdown_1.link(item.milestone.title, item.milestone.html_url)) + "\n\r\n" + item.milestone.description + "\n\r\n" + _this.getIssueTable(item.issues) + "\n                ";
+            return "\n" + Markdown_1.h1(Markdown_2.link(item.milestone.title, item.milestone.html_url)) + "\n\r\n<p>" + item.milestone.description + "</p>\n" + _this.getIssueTable(item.issues) + "\n                ";
         });
         var template = '';
         milestonesMd.forEach(function (milestoneMd) { return template += milestoneMd; });
