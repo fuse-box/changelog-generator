@@ -1,8 +1,7 @@
 {
-  "name": "changelog-generator",
-  "version": "0.0.1-alpha-2",
+  "name": "gulp-changelog-generator",
+  "version": "0.0.1-rc.1",
   "description": "rtfm",
-  "main": "changelog/changelog.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc -w -p .",
@@ -22,12 +21,12 @@
   "main": "dist/gulp-changelog-generator.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fuse-box/changelog-generator.git"
+    "url": "git+https://github.com/fuse-box/gulp-changelog-generator.git"
   },
   "bugs": {
-    "url": "https://github.com/fuse-box/changelog-generator/issues"
+    "url": "https://github.com/fuse-box/gulp-changelog-generator/issues"
   },
-  "homepage": "https://github.com/fuse-box/changelog-generator#readme",
+  "homepage": "https://github.com/fuse-box/gulp-changelog-generator#readme",
   "dependencies": {
     "@reactivex/rxjs": "^5.1.1",
     "gulp-util": "^3.0.8",
