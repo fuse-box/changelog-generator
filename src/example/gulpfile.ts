@@ -11,6 +11,7 @@ gulp.task('default', () => {
     repoOwner: 'fuse-box',
     repoName: 'fuse-box'
   };
+
   gulp.src('./test/CHANGELOG.md', {buffer:  false})
     .pipe(gulpChangeLogGeneratorPlugin(config))
     .pipe(gulp.dest(''));

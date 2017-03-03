@@ -33,18 +33,22 @@ export class ChangeLogTemplate {
   }
 
   getIssueTable(issues: IIssue.RootObject[]) {
-    const rows = issues.map((issue) => {
-      let title = `${link('ISSUE ' + issue.number, issue.html_url)} ${issue.title}`
-
+    let title = ``;
+    issues.forEach((issue) => {
       if (issue.pull_request) {
-        title = `${link('PR ' + issue.number, issue.pull_request.html_url)} ${issue.title}`
+        title += `
+[${link('PR ' + issue.number, issue.pull_request.html_url)}] ${issue.title}
+___
+`
+      } else {
+        title += `
+[${link('ISSUE ' + issue.number, issue.html_url)}] ${issue.title}
+___
+`
       }
-      return {
-        Title: title,
-        Closed: issue.closed_at ? humanDate(issue.closed_at) : '--',
-      }
+      return title;
     });
-    return table(rows);
+    return title;
   }
 
   createMd() {

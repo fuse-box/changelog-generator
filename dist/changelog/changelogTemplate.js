@@ -18,17 +18,17 @@ var ChangeLogTemplate = (function () {
         return 0;
     };
     ChangeLogTemplate.prototype.getIssueTable = function (issues) {
-        var rows = issues.map(function (issue) {
-            var title = Markdown_1.link('ISSUE ' + issue.number, issue.html_url) + " " + issue.title;
+        var title = "";
+        issues.forEach(function (issue) {
             if (issue.pull_request) {
-                title = Markdown_1.link('PR ' + issue.number, issue.pull_request.html_url) + " " + issue.title;
+                title += "\n[" + Markdown_1.link('PR ' + issue.number, issue.pull_request.html_url) + "] " + issue.title + "\n___\n";
             }
-            return {
-                Title: title,
-                Closed: issue.closed_at ? Markdown_1.humanDate(issue.closed_at) : '--',
-            };
+            else {
+                title += "\n[" + Markdown_1.link('ISSUE ' + issue.number, issue.html_url) + "] " + issue.title + "\n___\n";
+            }
+            return title;
         });
-        return Markdown_1.table(rows);
+        return title;
     };
     ChangeLogTemplate.prototype.createMd = function () {
         var _this = this;

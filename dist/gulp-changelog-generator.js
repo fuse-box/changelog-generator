@@ -47,7 +47,7 @@ exports.gulpChangeLogGeneratorPlugin = function (options) {
                 throw new PluginError(PLUGIN_NAME, 'no Buffer support allowed! please use `gulp.src(\'file\', {buffer: false})`');
             }
             if (file.isStream()) {
-                file.contents = file.contents.pipe(template);
+                file.contents = template;
             }
             return Promise.resolve(cb(null, file));
         })
