@@ -1,9 +1,10 @@
 "use strict";
-var changelog_1 = require('./changelog/changelog');
-var Observable_1 = require('@reactivex/rxjs/dist/cjs/Observable');
-var changelogTemplate_1 = require('./changelog/changelogTemplate');
-var through = require('through2');
-var gutil = require('gulp-util');
+Object.defineProperty(exports, "__esModule", { value: true });
+var changelog_1 = require("./changelog/changelog");
+var Observable_1 = require("@reactivex/rxjs/dist/cjs/Observable");
+var changelogTemplate_1 = require("./changelog/changelogTemplate");
+var through = require("through2");
+var gutil = require("gulp-util");
 var PluginError = gutil.PluginError;
 var PLUGIN_NAME = 'gulp-changelog-generator';
 exports.prefixStream = function (options) {

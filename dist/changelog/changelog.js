@@ -1,6 +1,7 @@
 "use strict";
-var Github = require('github');
-var rxjs_1 = require('@reactivex/rxjs');
+Object.defineProperty(exports, "__esModule", { value: true });
+var Github = require("github");
+var rxjs_1 = require("@reactivex/rxjs");
 var ChangelogApi = (function () {
     function ChangelogApi(config, options) {
         if (options === void 0) { options = {}; }

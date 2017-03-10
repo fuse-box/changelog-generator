@@ -19,7 +19,9 @@
     "@types/moment": "^2.13.0",
     "@types/node": "^7.0.5",
     "@types/through2": "^2.0.32",
-    "node": "^0.0.0"
+    "homedir": "^0.6.0",
+    "node": "^0.0.0",
+    "typescript": "^2.2.1"
   },
   "main": "dist/gulp-changelog-generator.js",
   "repository": {

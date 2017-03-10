@@ -35,17 +35,23 @@ export class ChangeLogTemplate {
   }
 
   getIssueTable(issues: IIssue.RootObject[]) {
-    let title = ``;
+
+    //     | First Header  | Second Header |
+    // | ------------- | ------------- |
+    // | Content Cell  | Content Cell  |
+    // | Content Cell  | Content Cell  |
+
+    let title = issues.length ? `
+| Reference | Description | Date |
+| --------- | ------------| ---- |` : '';
     issues.forEach((issue) => {
+      title += "\n|"
       if (issue.pull_request) {
-        title += `
-${rightPad(link('PR ' + issue.number, issue.pull_request.html_url), 24, ' ')} | ${issue.title} | ${issue.closed_at ? humanDate(issue.closed_at) : '--'}
-`
+        title += `${rightPad(link('PR ' + issue.number, issue.pull_request.html_url), 24, ' ')} | ${issue.title} | ${issue.closed_at ? humanDate(issue.closed_at) : '--'}`
       } else {
-        title += `
-${rightPad(link('ISSUE ' + issue.number, issue.html_url), 24, ' ')} | ${issue.title} | ${issue.closed_at ? humanDate(issue.closed_at) : '--'}
-`
+        title += `${rightPad(link('ISSUE ' + issue.number, issue.html_url), 24, ' ')} | ${issue.title} | ${issue.closed_at ? humanDate(issue.closed_at) : '--'}`
       }
+      title += "|"
       return title;
     });
     return title;

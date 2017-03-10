@@ -1,5 +1,6 @@
 "use strict";
-var moment = require('moment/moment');
+Object.defineProperty(exports, "__esModule", { value: true });
+var moment = require("moment/moment");
 exports.humanDate = function (date) {
     return moment(date).format('LLL');
 };

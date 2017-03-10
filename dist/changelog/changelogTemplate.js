@@ -1,7 +1,8 @@
 "use strict";
-var Markdown_1 = require('../utils/Markdown');
-var semver = require('semver');
-var rightPad = require('right-pad');
+Object.defineProperty(exports, "__esModule", { value: true });
+var Markdown_1 = require("../utils/Markdown");
+var semver = require("semver");
+var rightPad = require("right-pad");
 var ChangeLogTemplate = (function () {
     function ChangeLogTemplate(_milestones) {
         this._milestones = _milestones;
@@ -19,14 +20,16 @@ var ChangeLogTemplate = (function () {
         return 0;
     };
     ChangeLogTemplate.prototype.getIssueTable = function (issues) {
-        var title = "";
+        var title = issues.length ? "\n| Reference | Description | Date |\n| --------- | ------------| ---- |" : '';
         issues.forEach(function (issue) {
+            title += "\n|";
             if (issue.pull_request) {
-                title += "\n" + rightPad(Markdown_1.link('PR ' + issue.number, issue.pull_request.html_url), 24, ' ') + " | " + issue.title + " | " + (issue.closed_at ? Markdown_1.humanDate(issue.closed_at) : '--') + "\n";
+                title += rightPad(Markdown_1.link('PR ' + issue.number, issue.pull_request.html_url), 24, ' ') + " | " + issue.title + " | " + (issue.closed_at ? Markdown_1.humanDate(issue.closed_at) : '--');
             }
             else {
-                title += "\n" + rightPad(Markdown_1.link('ISSUE ' + issue.number, issue.html_url), 24, ' ') + " | " + issue.title + " | " + (issue.closed_at ? Markdown_1.humanDate(issue.closed_at) : '--') + "\n";
+                title += rightPad(Markdown_1.link('ISSUE ' + issue.number, issue.html_url), 24, ' ') + " | " + issue.title + " | " + (issue.closed_at ? Markdown_1.humanDate(issue.closed_at) : '--');
             }
+            title += "|";
             return title;
         });
         return title;
