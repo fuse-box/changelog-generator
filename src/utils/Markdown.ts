@@ -19,14 +19,14 @@ export const table = (array, columns?) => {
   table += "\r\n"
 
   // Generate table header seperator
-  table += cols.map(function() {
+  table += cols.map(function () {
     return '---'
   }).join(' | ')
   table += "\r\n"
 
   // Generate table body
-  array.forEach(function(item) {
-    table += cols.map(function(key) {
+  array.forEach(function (item) {
+    table += cols.map(function (key) {
       return String(item[key] || "")
     }).join(" | ") + "\r\n"
   })
@@ -81,8 +81,7 @@ export const h6 = (title: any) => {
  */
 export const altH2 = (title: any) => {
   return `
-        ${title}
-        ------
+### ${title}
     `;
 }
 /**
@@ -94,8 +93,7 @@ export const altH2 = (title: any) => {
  */
 export const altH1 = (title: any) => {
   return `
-${title}
-======
+### ${title}
     `;
 }
 /**

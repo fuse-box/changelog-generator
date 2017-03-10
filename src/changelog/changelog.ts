@@ -25,19 +25,10 @@ export class ChangelogApi {
       host: 'api.github.com', // should be api.github.com for GitHub
       timeout: 5000
     }, options));
-    this.authenticate(process.argv);
+    this.oauth();
   }
 
-  authenticate(args: any[]) {
-    if (!args || args && !args[2]) {
-      return;
-    }
-    const index = this._cmd.indexOf(args[2]);
-    if (index !== -1) {
-      // console.log(this._cmd[index]);
-      index < 2 ? this.basicAuth() : this.oauth();
-    }
-  }
+
   /**
    * concat owner/repo
    */
@@ -50,9 +41,6 @@ export class ChangelogApi {
    * @memberOf ChangelogApi
    */
   public oauth(): any {
-    if (!this.config.username || this.config.password) {
-      return Promise.reject(new Error('this.config.token is required for oauth.'));
-    }
     return this.github.authenticate({
       type: 'oauth',
       token: this.config.token

@@ -3,8 +3,6 @@ var gulp_changelog_generator_1 = require('../gulp-changelog-generator');
 var gulp = require('gulp');
 gulp.task('default', function () {
     var config = {
-        username: '',
-        password: '',
         repoOwner: 'fuse-box',
         repoName: 'fuse-box'
     };

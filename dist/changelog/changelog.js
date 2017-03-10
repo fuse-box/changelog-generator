@@ -13,17 +13,8 @@ var ChangelogApi = (function () {
             host: 'api.github.com',
             timeout: 5000
         }, options));
-        this.authenticate(process.argv);
+        this.oauth();
     }
-    ChangelogApi.prototype.authenticate = function (args) {
-        if (!args || args && !args[2]) {
-            return;
-        }
-        var index = this._cmd.indexOf(args[2]);
-        if (index !== -1) {
-            index < 2 ? this.basicAuth() : this.oauth();
-        }
-    };
     Object.defineProperty(ChangelogApi.prototype, "repo", {
         get: function () {
             return this.config.repoOwner + "/" + this.config.repoName;
@@ -32,9 +23,6 @@ var ChangelogApi = (function () {
         configurable: true
     });
     ChangelogApi.prototype.oauth = function () {
-        if (!this.config.username || this.config.password) {
-            return Promise.reject(new Error('this.config.token is required for oauth.'));
-        }
         return this.github.authenticate({
             type: 'oauth',
             token: this.config.token

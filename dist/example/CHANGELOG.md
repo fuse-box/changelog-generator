@@ -1,5 +1,69 @@
 
-# [1.3.122](https://github.com/fuse-box/fuse-box/milestone/10)
+
+### [1.3.126](https://github.com/fuse-box/fuse-box/milestone/15)
+    
+
+<p>Hot FIX. Related to the broken CLI. </p>
+
+                
+
+### [1.3.125](https://github.com/fuse-box/fuse-box/milestone/14)
+    
+
+<p>Important fixes before the major update</p>
+
+[ISSUE 376](https://github.com/fuse-box/fuse-box/issues/376) | Natives config (e.g disable process) | March 9, 2017 11:00 PM
+
+[ISSUE 377](https://github.com/fuse-box/fuse-box/issues/377) | Force typescript to bundle for commonjs unless ROLLUP | March 9, 2017 11:01 PM
+
+                
+
+### [1.3.124](https://github.com/fuse-box/fuse-box/milestone/13)
+    
+
+<p>Rollup!</p>
+
+[ISSUE 351](https://github.com/fuse-box/fuse-box/issues/351) | Unable to remove process module from bundle | March 8, 2017 9:04 PM
+
+[PR 353](https://github.com/fuse-box/fuse-box/pull/353) | Fluent | March 7, 2017 11:56 AM
+
+[ISSUE 370](https://github.com/fuse-box/fuse-box/issues/370) | Rollup built-in support | March 8, 2017 8:11 PM
+
+                
+
+### [1.3.123](https://github.com/fuse-box/fuse-box/milestone/11)
+    
+
+<p>Matroshka Release</p>
+
+[ISSUE 184](https://github.com/fuse-box/fuse-box/issues/184) | Standalone bundle | March 4, 2017 9:47 PM
+
+[ISSUE 277](https://github.com/fuse-box/fuse-box/issues/277) | Multiple __fsbx_decorate generated | February 28, 2017 2:18 PM
+
+[ISSUE 286](https://github.com/fuse-box/fuse-box/issues/286) | ~ in SASS files to include files from node_modules | February 27, 2017 3:42 PM
+
+[ISSUE 316](https://github.com/fuse-box/fuse-box/issues/316) | [bug] aliasing is broken with babel | February 27, 2017 11:09 AM
+
+[ISSUE 331](https://github.com/fuse-box/fuse-box/issues/331) | Simplified REGEXP (strings)  | March 3, 2017 9:29 AM
+
+[ISSUE 335](https://github.com/fuse-box/fuse-box/issues/335) | New arithmetic symbol ~ | March 3, 2017 9:44 PM
+
+[ISSUE 337](https://github.com/fuse-box/fuse-box/issues/337) | Emit `source-changed` for the `RawPlugin` | March 3, 2017 9:40 PM
+
+[ISSUE 340](https://github.com/fuse-box/fuse-box/issues/340) | SourceMap option will be removed (deprecated) | March 4, 2017 10:48 PM
+
+[ISSUE 342](https://github.com/fuse-box/fuse-box/issues/342) | New arithmetic symbol ^ | March 4, 2017 9:49 PM
+
+[ISSUE 343](https://github.com/fuse-box/fuse-box/issues/343) | CustomAPIFile Options for the most adventurous | March 4, 2017 11:12 PM
+
+[PR 344](https://github.com/fuse-box/fuse-box/pull/344) | normalize filename | March 5, 2017 3:57 PM
+
+[PR 345](https://github.com/fuse-box/fuse-box/pull/345) | Changed TypeScriptHelpers plugin test to support ts and tsx | March 5, 2017 9:59 AM
+
+                
+
+### [1.3.122](https://github.com/fuse-box/fuse-box/milestone/10)
+    
 
 <p>Babushka Release</p>
 
@@ -22,7 +86,9 @@
 [ISSUE 311](https://github.com/fuse-box/fuse-box/issues/311) | Dramatic cache improvements | February 25, 2017 10:58 PM
 
                 
-# [1.3.121](https://github.com/fuse-box/fuse-box/milestone/9)
+
+### [1.3.121](https://github.com/fuse-box/fuse-box/milestone/9)
+    
 
 <p>Mamochka release features critical fixes related to caching, aliases, css e.t.c. </p>
 
@@ -55,7 +121,9 @@
 [ISSUE 290](https://github.com/fuse-box/fuse-box/issues/290) | Aliases are not applied to deep require() calls | February 23, 2017 10:45 AM
 
                 
-# [1.3.120](https://github.com/fuse-box/fuse-box/milestone/8)
+
+### [1.3.120](https://github.com/fuse-box/fuse-box/milestone/8)
+    
 
 <p>Critical bug fixes</p>
 
@@ -64,7 +132,9 @@
 [ISSUE 263](https://github.com/fuse-box/fuse-box/issues/263) | Buffer is not bundled correctly | February 21, 2017 6:46 PM
 
                 
-# [1.3.119](https://github.com/fuse-box/fuse-box/milestone/5)
+
+### [1.3.119](https://github.com/fuse-box/fuse-box/milestone/5)
+    
 
 <p></p>
 
@@ -97,7 +167,9 @@
 [ISSUE 257](https://github.com/fuse-box/fuse-box/issues/257) | Reload the page with HMR if a package is not found in the scope. | February 21, 2017 11:07 AM
 
                 
-# [1.3.118](https://github.com/fuse-box/fuse-box/milestone/6)
+
+### [1.3.118](https://github.com/fuse-box/fuse-box/milestone/6)
+    
 
 <p></p>
 
@@ -118,7 +190,9 @@
 [PR 221](https://github.com/fuse-box/fuse-box/pull/221) | :memo: simply the docs for how to add a loader plugin :rose: | February 18, 2017 7:02 AM
 
                 
-# [1.3.117](https://github.com/fuse-box/fuse-box/milestone/4)
+
+### [1.3.117](https://github.com/fuse-box/fuse-box/milestone/4)
+    
 
 <p></p>
 
@@ -137,7 +211,9 @@
 [PR 201](https://github.com/fuse-box/fuse-box/pull/201) | :memo: rename to actual plugin name `PostCSS` | February 17, 2017 7:12 AM
 
                 
-# [1.3.116](https://github.com/fuse-box/fuse-box/milestone/3)
+
+### [1.3.116](https://github.com/fuse-box/fuse-box/milestone/3)
+    
 
 <p>HMR Plugins</p>
 
@@ -152,7 +228,9 @@
 [PR 191](https://github.com/fuse-box/fuse-box/pull/191) | add notes to env, uglify, and json plugins | February 16, 2017 7:28 PM
 
                 
-# [1.3.115](https://github.com/fuse-box/fuse-box/milestone/2)
+
+### [1.3.115](https://github.com/fuse-box/fuse-box/milestone/2)
+    
 
 <p></p>
 
@@ -161,7 +239,9 @@
 [ISSUE 180](https://github.com/fuse-box/fuse-box/issues/180) | Babel fails on config without sourcemaps | February 15, 2017 2:29 PM
 
                 
-# [1.3.114](https://github.com/fuse-box/fuse-box/milestone/1)
+
+### [1.3.114](https://github.com/fuse-box/fuse-box/milestone/1)
+    
 
 <p>Typescript</p>
 

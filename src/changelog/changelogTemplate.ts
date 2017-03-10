@@ -1,6 +1,6 @@
-import {h1} from '../utils/Markdown';
+import { h1 } from '../utils/Markdown';
 import { h5 } from '../utils/Markdown';
-import { noCase, link, table, altH1, humanDate } from '../utils/Markdown';
+import { noCase, link, table, altH1, humanDate, altH2 } from '../utils/Markdown';
 import * as semver from 'semver';
 import { IMilestones, IIssue } from './interfaces';
 import { Observable } from '@reactivex/rxjs/dist/cjs/Observable';
@@ -56,7 +56,7 @@ ${rightPad(link('ISSUE ' + issue.number, issue.html_url), 24, ' ')} | ${issue.ti
       .sort(this.sortByMileStone)
       .map((item) => {
         return `
-${h1(link(item.milestone.title, item.milestone.html_url))}\n\r
+${altH2(link(item.milestone.title, item.milestone.html_url))}\n\r
 <p>${item.milestone.description}</p>
 ${this.getIssueTable(item.issues)}
                 `;

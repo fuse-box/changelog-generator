@@ -44,10 +44,10 @@ exports.h6 = function (title) {
     return "###### " + title;
 };
 exports.altH2 = function (title) {
-    return "\n        " + title + "\n        ------\n    ";
+    return "\n### " + title + "\n    ";
 };
 exports.altH1 = function (title) {
-    return "\n" + title + "\n======\n    ";
+    return "\n### " + title + "\n    ";
 };
 exports.link = function (title, url, alt) {
     return "[" + title + "](" + url + (alt ? ' ' + alt : '') + ")";
